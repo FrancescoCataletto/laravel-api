@@ -9,7 +9,8 @@
 </head>
 <body>
     
-    <h1>PROVA</h1>
-
+    <div id="app"></div>
+    
+    <script src="{{asset('js/front.js')}}"></script>
 </body>
 </html>
