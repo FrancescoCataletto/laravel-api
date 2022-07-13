@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function index(){
 
-        $data = Post::all();
+        $data = Post::with('category')->with('tags')->get();
 
         return response()->json(compact('data'));
     }
