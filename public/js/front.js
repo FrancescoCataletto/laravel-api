@@ -1909,7 +1909,22 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'App'
+  name: 'App',
+  data: function data() {
+    return {
+      postApi: 'http://127.0.0.1:8000/api/index'
+    };
+  },
+  methods: {
+    getApi: function getApi() {
+      axios.get(this.postApi).then(function (res) {
+        console.log(res.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    return this.getApi();
+  }
 });
 
 /***/ }),
